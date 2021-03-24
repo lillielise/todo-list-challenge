@@ -5,4 +5,5 @@ TODO list react application that allows a user to add new items and remove items
 ## Setup Instructions
 
 `git clone https://github.com/lillielise/todo-list-challenge.git`
+
 `yarn start`
