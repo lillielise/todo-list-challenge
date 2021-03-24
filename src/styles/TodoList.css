@@ -14,10 +14,14 @@
 }
 
 .list-item-icons {
+  display: flex;
+}
+
+.list-item-icons-hidden {
   display: none;
 }
 
-.list-item:hover .list-item-icons {
+.list-item:hover .list-item-icons-hidden {
   display: block;
   cursor: pointer;
 }
