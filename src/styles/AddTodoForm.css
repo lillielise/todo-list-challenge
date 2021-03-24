@@ -1,0 +1,22 @@
+.todo-form {
+  padding: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.todo-form-input {
+  width: calc(100% - 40px);
+  box-sizing: border-box;
+  height: 40px;
+  padding: 0.5em;
+  border: 1px #181a18 solid;
+}
+
+.todo-form-button {
+  width: 40px;
+  box-sizing: border-box;
+  height: 40px;
+  padding: 0.5em;
+  border: 1px #181a18 solid;
+  border-left-style: none;
+}

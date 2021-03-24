@@ -1,0 +1,27 @@
+.list-items-container {
+  height: 100%;
+  overflow: scroll;
+}
+
+.list-item {
+  padding: 1em;
+  border-bottom: 1px solid #181a18;
+  margin: 1em;
+  display: flex;
+  height: 15px;
+  justify-content: space-between;
+  overflow: auto;
+}
+
+.list-item-icons {
+  display: none;
+}
+
+.list-item:hover .list-item-icons {
+  display: block;
+  cursor: pointer;
+}
+
+.list-item-icons *:not(:last-child) {
+  margin-right: 0.5em;
+}
