@@ -15,6 +15,7 @@
 
 .list-item-icons {
   display: flex;
+  min-width: 40px;
 }
 
 .list-item-icons-hidden {
@@ -28,4 +29,8 @@
 
 .list-item-icons *:not(:last-child) {
   margin-right: 0.5em;
+}
+
+.list-item-icons {
+  margin-left: 0.5em;
 }
