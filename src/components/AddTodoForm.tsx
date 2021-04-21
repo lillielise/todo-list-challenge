@@ -1,8 +1,13 @@
+import React from "react";
 import "../styles/AddTodoForm.css";
 import { FaPlus } from "react-icons/fa";
 import { Formik, Field, Form } from "formik";
 
-const AddTodoForm = ({ handleAddItem }) => {
+type Props = {
+  handleAddItem: () => void;
+};
+
+const AddTodoForm = ({ handleAddItem }: Props) => {
   return (
     <Formik initialValues={{ name: "" }} onSubmit={handleAddItem}>
       {(formikProps) => (

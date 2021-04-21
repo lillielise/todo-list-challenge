@@ -3,21 +3,16 @@ import "../styles/TodoList.css";
 import { FaTrash, FaExclamationCircle } from "react-icons/fa";
 
 type Props = {
-  todoListItems: Array<object>;
+  todoListItems: Array<Items>;
   handleDeleteItem: Function;
   handlePrioritizeItem: Function;
 };
 
-// TODO: come back and fix the any type
-// interface Item {
-//   value: { id: Number; name: String; priority: Number };
-// }
-
-// type Items = {
-//   id: Number;
-//   name: String;
-//   priority: Number;
-// };
+type Items = {
+  id: Number;
+  name: String;
+  priority: Boolean;
+};
 
 const TodoList = ({
   todoListItems,
@@ -25,7 +20,7 @@ const TodoList = ({
   handlePrioritizeItem,
 }: Props) => {
   const renderTodoListItems = () => {
-    return todoListItems.map((item: any) => (
+    return todoListItems.map((item) => (
       <li className="list-item" key={`todo-${item.id}`}>
         <p>{item.name}</p>
         <div className="list-item-icons">

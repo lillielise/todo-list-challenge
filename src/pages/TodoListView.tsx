@@ -1,12 +1,19 @@
+import React from "react";
 import "../styles/TodoListView.css";
 import { useState } from "react";
 import TodoList from "../components/TodoList";
 import AddTodoForm from "../components/AddTodoForm";
 
-const TodoListView = (props) => {
-  const [todoListItems, setTodoListItems] = useState([]);
+type Items = {
+  id: number;
+  name: String;
+  priority: Boolean;
+};
 
-  const handleAddItem = (formData, actions) => {
+const TodoListView = () => {
+  const [todoListItems, setTodoListItems] = useState<Array<Items>>([]);
+
+  const handleAddItem = (formData?: any, actions?: any): void => {
     const lastId = todoListItems.length
       ? todoListItems[todoListItems.length - 1].id
       : 0;
@@ -17,16 +24,16 @@ const TodoListView = (props) => {
     actions.resetForm();
   };
 
-  const handleDeleteItem = (id) => {
+  const handleDeleteItem = (id: Number) => {
     setTodoListItems(todoListItems.filter((item) => item.id !== id));
   };
 
-  const handlePrioritizeItem = (id) => {
+  const handlePrioritizeItem = (id: Number) => {
     // update item priority and sort todo list items - sort by id (order of insertion) if priority is the same and sort by priorty if they are not equal
     setTodoListItems(
       todoListItems
         .map((item) => (item.id === id ? { ...item, priority: true } : item))
-        .sort((a, b) => {
+        .sort((a, b): any => {
           if (a.priority === b.priority) {
             return a.id - b.id;
           } else {
