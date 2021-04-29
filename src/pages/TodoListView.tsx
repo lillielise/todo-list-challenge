@@ -4,11 +4,13 @@ import { useState } from "react";
 import TodoList from "../components/TodoList";
 import AddTodoForm from "../components/AddTodoForm";
 
-type Items = {
+// Interface is exclusively used to represent the shape of an object data structure
+// One major difference between type aliases vs interfaces is that interfaces are open and type aliases are closed. Meaning you can extend an interface by declaring it a second time
+interface Items {
   id: number;
-  name: String;
-  priority: Boolean;
-};
+  name: string;
+  priority: boolean;
+}
 
 const TodoListView = () => {
   const [todoListItems, setTodoListItems] = useState<Array<Items>>([]);

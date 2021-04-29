@@ -3,16 +3,17 @@ import "../styles/TodoList.css";
 import { FaTrash, FaExclamationCircle } from "react-icons/fa";
 
 type Props = {
+  // Generics - describe what an array contains
   todoListItems: Array<Items>;
   handleDeleteItem: Function;
   handlePrioritizeItem: Function;
 };
 
-type Items = {
-  id: Number;
-  name: String;
-  priority: Boolean;
-};
+interface Items {
+  id: number;
+  name: string;
+  priority: boolean;
+}
 
 const TodoList = ({
   todoListItems,

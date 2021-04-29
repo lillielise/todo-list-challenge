@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="todo-list-container"
+>
+  <header
+    className="todo-list-header"
+  >
+    <h1>
+      Todo List
+    </h1>
+  </header>
+  <AddTodoForm
+    handleAddItem={[Function]}
+  />
+  <TodoList
+    handleDeleteItem={[Function]}
+    handlePrioritizeItem={[Function]}
+    todoListItems={Array []}
+  />
+</div>
+`;
+
+exports[`rendrs correctly 1`] = `
+<div
+  className="todo-list-container"
+>
+  <header
+    className="todo-list-header"
+  >
+    <h1>
+      Todo List
+    </h1>
+  </header>
+  <AddTodoForm
+    handleAddItem={[Function]}
+  />
+  <TodoList
+    handleDeleteItem={[Function]}
+    handlePrioritizeItem={[Function]}
+    todoListItems={Array []}
+  />
+</div>
+`;
